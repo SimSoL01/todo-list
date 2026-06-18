@@ -9,6 +9,15 @@ btnAdd.addEventListener('click', function() {
 
     const li = document.createElement('li')
     li.textContent = noiDung
+
+    const btnXoa = document.createElement('button')
+    btnXoa.textContent = 'Xóa'
+
+    btnXoa.addEventListener('click', function() {
+    listTask.removeChild(li)
+    })
+    li.appendChild(btnXoa)
+    
     listTask.appendChild(li)
 
     inputTask.value = ''
